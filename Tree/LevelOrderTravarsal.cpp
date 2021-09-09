@@ -15,15 +15,16 @@ Node *newNode(int k)
 }
 void printRecursive(Node *root,int h)
 {
-    if(root==NULL)
+    if(root==NULL || h<1)
     return;
     if(h==1)
-    cout<<root->data<<endl;
+    cout<<root->data<<" ";
     else
     {
         printRecursive(root->left,h-1);
         printRecursive(root->right,h-1);
     }
+    
 }
 void printQueue(Node *root)
 {
@@ -64,8 +65,10 @@ int main()
     root->right->right=newNode(34);
 
     int h=height(root);
-    cout<<h<<endl;
-    // for(int i=1;i<=h;i++)
-    // printRecursive(root,i);
-    printQueue(root);
+    //cout<<h<<endl;
+
+    for(int i=1;i<=h;i++)
+    printRecursive(root,i);
+    
+    //printQueue(root);
 }
