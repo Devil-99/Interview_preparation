@@ -15,10 +15,10 @@ Node *newNode(int k)
 }
 void printRecursive(Node *root,int h)
 {
-    if(root==NULL)
+    if(root==NULL || h<1)
     return;
     if(h==1)
-    cout<<root->data<<endl;
+    cout<<root->data<<" ";
     else
     {
         printRecursive(root->left,h-1);
@@ -42,6 +42,7 @@ void printQueue(Node *root)
         q.push(temp->right);
     }
 }
+
 int height(Node *root)
 {
     if(root==NULL)
@@ -53,19 +54,37 @@ int height(Node *root)
     return max(lh,rh)+1;
     }
 }
+bool balanced(Node *root)
+{
+    int left=height(root->left);
+    int right=height(root->right);
+    if(abs(right-left)>1)
+    return false;
+    else
+    return true;
+}
 int main()
 {
-    Node *root=newNode(11);
-    root->left=newNode(21);
-    root->right=newNode(22);
-    root->left->left=newNode(31);
-    root->left->right=newNode(32);
-    root->right->left=newNode(33);
-    root->right->right=newNode(34);
+    // Node *root=newNode(11);
+    // root->left=newNode(21);
+    // root->right=newNode(22);
+    // root->left->left=newNode(31);
+    // root->left->right=newNode(32);
+    // root->right->left=newNode(33);
+    // root->right->right=newNode(34);
+
+    Node *root=newNode(3);
+    root->left=newNode(9);
+    root->right=newNode(20);
+    root->right->left=newNode(15);
+    root->right->right=newNode(7);
 
     int h=height(root);
-    cout<<h<<endl;
+    //cout<<h<<endl;
+
     // for(int i=1;i<=h;i++)
     // printRecursive(root,i);
-    printQueue(root);
+    
+    //printQueue(root);
+    (balanced(root))?cout<<"Yes":cout<<"No";
 }
