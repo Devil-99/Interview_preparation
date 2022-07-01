@@ -15,7 +15,6 @@ public:
 void Inorder(Node *root)
 {
     stack<Node*> s;
-    s.push(root);
     while(true)
     {
         if(root!=NULL)
@@ -63,7 +62,7 @@ int main() {
     root->left->right->right=new Node(6);
     
     Inorder(root);
-    Preorder(root);
+    // Preorder(root);
     // cout<<endl;
     // Postorder(root);
     return 0;
