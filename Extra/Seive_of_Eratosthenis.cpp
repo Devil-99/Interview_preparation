@@ -1,4 +1,5 @@
 // Find all the prime numbers <= n
+
 #include <bits/stdc++.h>
 using namespace std;
 void solve(int n)
@@ -19,6 +20,7 @@ void solve(int n)
     cout<<i<<" ";
     cout<<endl;
 }
+
 int main() {
     int n;
     cin>>n;
