@@ -38,5 +38,6 @@ int main() {
 
     vector<vector<int>> dp(n,vector<int>(sum+1,-1));
     cout<<countDp(s,sum,n,0,dp);
+    
     return 0;
 }
