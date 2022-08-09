@@ -46,6 +46,7 @@ int main() {
     root->left->left=new Node(31);
     root->right->left=new Node(33);
     root->right->right=new Node(34);
+    
     Inorder(root);
     cout<<endl;
     Preorder(root);

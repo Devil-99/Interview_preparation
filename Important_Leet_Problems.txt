@@ -1,0 +1,2 @@
+2289. Steps to Make Array Non-decreasing - https://leetcode.com/problems/steps-to-make-array-non-decreasing/
+2364. Count Number of Bad Pairs - https://leetcode.com/contest/biweekly-contest-84/problems/count-number-of-bad-pairs/
