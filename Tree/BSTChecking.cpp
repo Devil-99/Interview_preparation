@@ -1,18 +1,21 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-struct Node{
+class Node{
+public:
     int data;
-    struct Node* left;
-    struct Node* right;
+    Node *left,*right;
+    Node(){
+        left=NULL;
+        right=NULL;
+    }
+    Node(int val){
+        data=val;
+        left=NULL;
+        right=NULL;
+    }
 };
-Node *newNode(int k)
-{
-    Node *temp=new Node;
-    temp->data=k;
-    temp->left=temp->right=NULL;
-    return temp;
-}
+
 bool BSTUtil(Node* node,int min,int max)
     {
         if(node==NULL)
@@ -41,11 +44,11 @@ void inorder(Node* root,vector<int> &arr)
 
 int main()
 {
-    Node *root=newNode(4);
-    root->left=newNode(2);
-    root->right=newNode(5);
-    root->left->left=newNode(1);
-    root->left->right=newNode(3);
+    Node *root=new Node(4);
+    root->left=new Node(2);
+    root->right=new Node(5);
+    root->left->left=new Node(1);
+    root->left->right=new Node(3);
     // root->right->left=newNode(6);
     // root->right->right=newNode(7);
     vector<int> ans;

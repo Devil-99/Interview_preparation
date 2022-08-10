@@ -1,36 +1,42 @@
 #include <bits/stdc++.h>
 using namespace std;
-class TreeNode{
+
+class Node{
 public:
-    int val;
-    TreeNode *left,*right;
-    TreeNode(int data)
-    {
-        val=data;
-        right=left=NULL;
+    int data;
+    Node *left,*right;
+    Node(){
+        left=NULL;
+        right=NULL;
+    }
+    Node(int val){
+        data=val;
+        left=NULL;
+        right=NULL;
     }
 };
-bool util(TreeNode* left,TreeNode* right)
+
+bool util(Node* left,Node* right)
     {
         if(left==NULL || right==NULL)
             return right==left;
-        if(left->val!=right->val)
+        if(left->data!=right->data)
             return false;
         return util(left->left,right->right) && util(left->right,right->left);
     }
-bool isSymmetric(TreeNode* root) {
+bool isSymmetric(Node* root) {
     if(root==NULL)
         return true;
     return util(root->left,root->right);
 }
 int main() {
- TreeNode *root=new TreeNode(10);
-    root->left=new TreeNode(20);
-    root->right=new TreeNode(20);
-    root->left->left=new TreeNode(40);
-    root->left->right=new TreeNode(50);
-    root->right->left=new TreeNode(50);
-    root->right->right=new TreeNode(40);
+    Node *root=new Node(10);
+    root->left=new Node(20);
+    root->right=new Node(20);
+    root->left->left=new Node(40);
+    root->left->right=new Node(50);
+    root->right->left=new Node(50);
+    root->right->right=new Node(40);
 
     cout<<isSymmetric(root);
     return 0;

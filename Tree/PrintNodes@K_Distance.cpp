@@ -2,17 +2,20 @@
 using namespace std;
 
 class Node{
-    public:
+public:
     int data;
     Node *left,*right;
+    Node(){
+        left=NULL;
+        right=NULL;
+    }
+    Node(int val){
+        data=val;
+        left=NULL;
+        right=NULL;
+    }
 };
-Node *newNode(int k)
-{
-    Node *temp=new Node;
-    temp->data=k;
-    temp->left=temp->right=NULL;
-    return temp;
-}
+
 void height(Node *root,int k,int h)
 {
     if(root==NULL)
@@ -29,13 +32,13 @@ void height(Node *root,int k,int h)
 }
 int main()
 {
-    Node *root=newNode(11);
-    root->left=newNode(21);
-    root->right=newNode(22);
-    root->left->left=newNode(31);
-    root->left->right=newNode(32);
-    root->right->left=newNode(33);
-    root->right->right=newNode(34);
+    Node *root=new Node(11);
+    root->left=new Node(21);
+    root->right=new Node(22);
+    root->left->left=new Node(31);
+    root->left->right=new Node(32);
+    root->right->left=new Node(33);
+    root->right->right=new Node(34);
 
     height(root,2,1);
 

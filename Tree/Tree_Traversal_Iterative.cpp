@@ -53,17 +53,16 @@ void Preorder(Node *root)
 }
 
 int main() {
-    Node *root=new Node(1);
-    root->left=new Node(2);
-    root->right=new Node(7);
-    root->left->left=new Node(3);
-    root->left->right=new Node(4);
-    root->left->right->left=new Node(5);
-    root->left->right->right=new Node(6);
+    Node *root=new Node(11);
+    root->left=new Node(21);
+    root->right=new Node(22);
+    root->left->left=new Node(31);
+    root->left->right=new Node(32);
+    root->left->right->left=new Node(43);
+    root->left->right->right=new Node(44);
     
     Inorder(root);
     // Preorder(root);
     // cout<<endl;
-    // Postorder(root);
     return 0;
 }

@@ -1,16 +1,21 @@
 #include <bits/stdc++.h>
 using namespace std;
+
 class Node{
-    public:
+public:
     int data;
     Node *left,*right;
-
-    Node(int x)
-    {
-        data=x;
-        left=NULL;right=NULL;
+    Node(){
+        left=NULL;
+        right=NULL;
+    }
+    Node(int val){
+        data=val;
+        left=NULL;
+        right=NULL;
     }
 };
+
 void printQueue(Node *root)
 {
     queue<Node *> q;

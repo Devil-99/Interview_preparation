@@ -5,10 +5,14 @@ class Node{
 public:
     int data;
     Node *left,*right;
-    Node(int val)
-    {
+    Node(){
+        left=NULL;
+        right=NULL;
+    }
+    Node(int val){
         data=val;
-        right=left=NULL;
+        left=NULL;
+        right=NULL;
     }
 };
 

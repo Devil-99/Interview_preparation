@@ -2,17 +2,20 @@
 using namespace std;
 
 class Node{
-    public:
+public:
     int data;
     Node *left,*right;
+    Node(){
+        left=NULL;
+        right=NULL;
+    }
+    Node(int val){
+        data=val;
+        left=NULL;
+        right=NULL;
+    }
 };
-Node *newNode(int k)
-{
-    Node *temp=new Node;
-    temp->data=k;
-    temp->left=temp->right=NULL;
-    return temp;
-}
+
 void printRecursive(Node *root,int h)
 {
     if(root==NULL || h<1)
@@ -65,26 +68,21 @@ bool balanced(Node *root)
 }
 int main()
 {
-    // Node *root=newNode(11);
-    // root->left=newNode(21);
-    // root->right=newNode(22);
-    // root->left->left=newNode(31);
-    // root->left->right=newNode(32);
-    // root->right->left=newNode(33);
-    // root->right->right=newNode(34);
+    Node *root=new Node(11);
+    root->left=new Node(21);
+    root->right=new Node(22);
+    root->left->left=new Node(31);
+    root->left->right=new Node(32);
+    root->right->left=new Node(33);
+    root->right->right=new Node(34);
 
-    Node *root=newNode(3);
-    root->left=newNode(9);
-    root->right=newNode(20);
-    root->right->left=newNode(15);
-    root->right->right=newNode(7);
-
-    int h=height(root);
-    //cout<<h<<endl;
-
+    // Recursive approach
+    // int h=height(root);
+    // //cout<<h<<endl;
     // for(int i=1;i<=h;i++)
     // printRecursive(root,i);
     
-    //printQueue(root);
-    (balanced(root))?cout<<"Yes":cout<<"No";
+    // Iterative approach
+    printQueue(root);
+    // (balanced(root))?cout<<"Yes":cout<<"No";
 }
