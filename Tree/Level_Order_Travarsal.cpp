@@ -57,15 +57,6 @@ int height(Node *root)
     return max(lh,rh)+1;
     }
 }
-bool balanced(Node *root)
-{
-    int left=height(root->left);
-    int right=height(root->right);
-    if(abs(right-left)>1)
-    return false;
-    else
-    return true;
-}
 int main()
 {
     Node *root=new Node(11);
@@ -76,13 +67,13 @@ int main()
     root->right->left=new Node(33);
     root->right->right=new Node(34);
 
+    int h=height(root);
+    //cout<<h<<endl;
+    
     // Recursive approach
-    // int h=height(root);
-    // //cout<<h<<endl;
-    // for(int i=1;i<=h;i++)
-    // printRecursive(root,i);
+    for(int i=1;i<=h;i++)
+    printRecursive(root,i);
     
     // Iterative approach
     printQueue(root);
-    // (balanced(root))?cout<<"Yes":cout<<"No";
 }

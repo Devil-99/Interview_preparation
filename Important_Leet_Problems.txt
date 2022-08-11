@@ -1,2 +1,6 @@
 2289. Steps to Make Array Non-decreasing - https://leetcode.com/problems/steps-to-make-array-non-decreasing/
 2364. Count Number of Bad Pairs - https://leetcode.com/contest/biweekly-contest-84/problems/count-number-of-bad-pairs/
+14. Longest Common Prefix - https://leetcode.com/problems/longest-common-prefix/
+76. Minimum Window Substring - https://leetcode.com/problems/minimum-window-substring/
+560. Subarray Sum Equals K - https://leetcode.com/problems/subarray-sum-equals-k/
+209. Minimum Size Subarray Sum - https://leetcode.com/problems/minimum-size-subarray-sum/

@@ -53,6 +53,7 @@ int main()
     // root->right->right=newNode(7);
     vector<int> ans;
 
+    // Iterative Approach
     inorder(root,ans);
     bool f=1;
     for(int i=1;i<ans.size();i++)
@@ -62,9 +63,12 @@ int main()
         break;}
     }
     cout<<f<<endl;
+
+    // Recursive Approach
     // for(auto i:ans)
     // cout<<i<<" ";
     // cout<<endl;
     //cout<<isBST(root);
+    
 return 0;
 }
