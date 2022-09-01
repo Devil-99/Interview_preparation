@@ -1,4 +1,5 @@
 // Print all possible subsequences of an array.
+// All Permutation.
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -24,6 +25,7 @@ int main() {
     vector<int>array(n);
     for(int i=0;i<n;i++)
         cin>>array[i];
+    cout<<endl;
     vector<int>tempArray;
     func(0,tempArray,array);
 }

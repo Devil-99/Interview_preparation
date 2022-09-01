@@ -19,7 +19,6 @@ void allSubsequence(int index,int k,int sum,vector<int>temp,vector<int>array) {
     temp.pop_back();
     sum-=array[index];
     allSubsequence(index+1,k,sum,temp,array);
-
 }
 
 bool oneSubsequence(int index,int k,int sum,vector<int>temp,vector<int>array) {
@@ -45,6 +44,23 @@ bool oneSubsequence(int index,int k,int sum,vector<int>temp,vector<int>array) {
     return false;
 }
 
+int countSubsequence(int index,int k,int sum,vector<int>array) {
+    if(index==array.size()) {
+        if(sum==k)
+            return 1;
+        else
+            return 0;
+    }
+
+    sum += array[index];
+    int l = countSubsequence(index+1,k,sum,array);
+    
+    sum -= array[index];
+    int r = countSubsequence(index+1,k,sum,array);
+
+    return l+r;
+}
+
 int main() {
     int n,k;
     cout<<"Enter the size of array:- ";
@@ -55,6 +71,10 @@ int main() {
     cout<<"Enter the required sum:- ";
     cin>>k;
     vector<int>tempArray;
-    // allSubsequence(0,k,0,tempArray,array);
+    allSubsequence(0,k,0,tempArray,array);
+
     oneSubsequence(0,k,0,tempArray,array);
+
+    cout<< countSubsequence(0,k,0,array);
+
 }

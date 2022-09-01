@@ -4,3 +4,4 @@
 76. Minimum Window Substring - https://leetcode.com/problems/minimum-window-substring/
 560. Subarray Sum Equals K - https://leetcode.com/problems/subarray-sum-equals-k/
 209. Minimum Size Subarray Sum - https://leetcode.com/problems/minimum-size-subarray-sum/
+746. Min Cost Climbing Stairs - https://leetcode.com/problems/min-cost-climbing-stairs/
