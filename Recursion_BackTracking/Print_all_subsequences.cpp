@@ -1,5 +1,4 @@
 // Print all possible subsequences of an array.
-// All Permutation.
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -23,6 +22,7 @@ int main() {
     cout<<"Enter the size of array:- ";
     cin>>n;
     vector<int>array(n);
+    cout<<"Enter the elements of the array: ";
     for(int i=0;i<n;i++)
         cin>>array[i];
     cout<<endl;

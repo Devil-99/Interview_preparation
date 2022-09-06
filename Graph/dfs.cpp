@@ -33,7 +33,7 @@ int main()
     int node;  //starting node
     cout<<"Enter the starting node"<<endl;
     cin>>node;
-     bool visited[V]={false};
+    bool visited[V]={false};
     dfs(node,adj,visited);
     cout<<endl;
 
