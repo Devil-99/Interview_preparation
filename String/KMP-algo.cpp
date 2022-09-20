@@ -1,39 +1,36 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void LPS(string txt,int m,int* lps)
+void LPS(string txt,int* lps)
 {
-    int len=0;
+    int idx=0;
     lps[0]=0;
-    for(int i=1;i<m;i++)
+    for(int i=1;i<txt.size();)
     {
-        if(txt[i]==txt[len])
-        {
-            len++;
-            lps[i]=len;
+        if(txt[i]==txt[idx]){
+            idx++;
+            lps[i]=idx;
             i++;
         }
-        else
-        {
-            if(len!=0)
-            len=lps[len-1];
-            else
-            {lps[i]=0;
-            i++;}
+        else{
+            if(idx!=0)
+                idx=lps[idx-1];
+            else{
+                lps[i]=0;
+                i++;
+            }
         }
     }
 }
-void KMPsearch(string s,string txt)
+void KMPsearch(string s,string target,int* lps)
 {
     int n=s.length();
-    int m=txt.length();
-    int lps[m];
-    LPS(txt,m,lps);
+    int m=target.length();
 
     int i=0,j=0;
     while(i<n)
     {
-        if(s[i]==txt[j])
+        if(s[i]==target[j])
         {
         i++;
         j++;
@@ -43,7 +40,7 @@ void KMPsearch(string s,string txt)
             cout<<"String matched at index "<<i-j;
             j=lps[j-1];
         }
-        else if(i<n && s[i]!=txt[j])
+        else if(i<n && s[i]!=target[j])
             if(j!=0)
             j=lps[j-1];
             else
@@ -53,8 +50,13 @@ void KMPsearch(string s,string txt)
 }
 int main()
 {
-    string s,txt;
-    cin>>s>>txt;
-    KMPsearch(s,txt);
+    string s,target;
+    cin>>s>>target;
+
+    int m=target.size();
+    int lps[m];
+    LPS(target,lps);
+
+    KMPsearch(s,target,lps);
 return 0;
 }
