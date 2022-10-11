@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void bfs(int x,int V, vector<int>adj[],bool visited[])
+void bfs(int x, vector<int>adj[],bool visited[])
 {
     queue <int> q;
     q.push(x);
@@ -58,7 +58,7 @@ int main()
     // If there is only a single connected graph then you don't need to run a loop, just run the BFS once for any vertex(x).
     for(int i=0;i<V;i++){
         if(visited[i]==0)
-            bfs(i,V,adj,visited);
+            bfs(i,adj,visited);
     }
         
 return 0;
