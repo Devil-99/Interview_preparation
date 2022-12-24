@@ -34,8 +34,9 @@ public:
 
 // derivation is private in default
 class Developer : Employee{
-public:
+private:
     string Language;
+public:
     // as parent class has no default constructor so we have to create our own constructor for developer class also
     Developer(string name,string company,int age,string language)
         : Employee(name,company,age)

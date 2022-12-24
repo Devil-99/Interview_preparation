@@ -18,7 +18,7 @@ void LPS(string txt,int* lps)
             else{
                 lps[i]=0;
                 i++;
-            }
+            }who has excess sleep
         }
     }
 }

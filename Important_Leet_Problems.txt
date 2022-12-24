@@ -10,4 +10,4 @@
 987. Vertical Order Traversal of a Binary Tree - https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/
 11. Container With Most Water - https://leetcode.com/problems/container-with-most-water/
 718. Maximum Length of Repeated Subarray - https://leetcode.com/problems/maximum-length-of-repeated-subarray/ - KMP Algorithm
-
+932. Beautiful Array - https://leetcode.com/problems/beautiful-array/description/

@@ -4,17 +4,7 @@ using namespace std;
 class rectangle
 {
     private:
-        int x,y,height,width;
-    
-    public:
-        void set(int a,int b,int h,int w)
-        {
-            x=a;
-            y=b;
-            height=h;
-            width=w;
-        }
-        
+        int height,width;
         bool is_square()
         {
             if(height==width)
@@ -26,7 +16,14 @@ class rectangle
         {
             return (height*width);
         }
-        
+
+    public:
+        void set(int h,int w)
+        {
+            height=h;
+            width=w;
+        }
+         
         void print()
         {
             cout<<"Height="<<height<<" Width="<<width<<" Area="<<get_area()<<endl;
@@ -39,7 +36,7 @@ class rectangle
 
 int main() {
     rectangle obj;
-    obj.set(0,0,5,5);
+    obj.set(6,5);
     obj.print();
     return 0;
 }
