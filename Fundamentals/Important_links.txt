@@ -1,7 +1,0 @@
-How does C++ Vector works? - https://stackoverflow.com/questions/3167272/how-does-c-stdvector-work
-Compile time vs Runtime - https://www.baeldung.com/cs/runtime-vs-compile-time#:~:text=Compile%20time%20is%20the%20period,generally%20occurs%20after%20compile%20time.
-
-Structure Padding - https://www.javatpoint.com/structure-padding-in-c#:~:text=Structure%20padding%20is%20a%20concept,align%20the%20data%20in%20memory.
-Abstraction vs Encapsulation - https://stackoverflow.com/questions/742341/difference-between-abstraction-and-encapsulation
-
-System Design of a Chat Application - https://towardsdatascience.com/ace-the-system-interview-design-a-chat-application-3f34fd5b85d0

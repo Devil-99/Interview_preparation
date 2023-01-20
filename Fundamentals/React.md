@@ -2,7 +2,10 @@
 - Understanding this keyword in class component is very different than other language.
 - Remember to bind event handlers.
 - Classes don't minify very well and make hot reloading very unreliable.
-- Hooks helps us to allowing us stateful logic without tempering the component structure.
+- Hooks helps us to allowing use stateful logic without tempering the component structure.
+
+## 2. React Props and State vs Props.
+[SimpliLearn](https://www.simplilearn.com/what-is-reactjs-props-article#:~:text=In%20ReactJS%2C%20the%20props%20are,components%20are%20read%2Donly%20components.)
 
 ## 2. What is event.target.value in React exactly ?
 Ans -   
@@ -20,7 +23,7 @@ Ans -
 ## 4. Lifecycle method of React.
 ### **Mounting :**
 Each component in React has a lifecycle which you can monitor and manipulate during its three main phases.
-The three phases are: **Mounting, Updating, and Unmounting**.
+The three phases are: ***Mounting, Updating, and Unmounting***.
 
 Mounting means putting elements into the DOM.
 React has four built-in methods that gets called, in this order, when mounting a component:
@@ -55,6 +58,9 @@ componentWillUnmount()
 
 ## 5. React Hooks.
 Hooks are the feature which allow you to use React features without having to write a class.
+
+[Link](https://www.codingninjas.com/codestudio/library/top-react-hooks-interview-questions)
+
 ### Use Effect -
 In class components, we have lifecycle methods to perform actions in a specific lifecycle stage of our component. For us to do something similar and perform side effects in our functional components, the React team created the useEffect Hook.
 

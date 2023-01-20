@@ -26,7 +26,7 @@ void merge(int a[],int left,int mid,int right,int &count)
             count += (n1-i);
             a[k++]=temp2[j++];
         }
-        // cout<<count<<" ";
+        cout<<count<<" ";
     }
 
     while(i<n1)

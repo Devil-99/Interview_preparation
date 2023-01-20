@@ -1,5 +1,3 @@
-/*                	SOUVIK MAJI 
-   JALPAIGURI GOVT. ENGG. COLLEGE*/
 #include <bits/stdc++.h>
 using namespace std;
 

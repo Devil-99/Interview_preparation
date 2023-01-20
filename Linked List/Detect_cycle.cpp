@@ -16,26 +16,20 @@ public:
 
 bool DetectCycle(Node* head){
     Node *slow=head,*fast=head->next;
-    while(fast and slow!=fast){
+    while(slow!=fast){
+        if(fast==NULL || fast->next==NULL)
+            return false;
         slow=slow->next;
-        if(fast->next!=NULL)
-            fast=fast->next->next;
-        else{
-            fast=fast->next;
-            break;}
+        fast=fast->next->next;
     }
-    if (fast==NULL)
-        return false;
-    else{
-        Node *start=head;
+    Node *start=head;
+    slow=slow->next;
+    while(start!=slow){
+        start=start->next;
         slow=slow->next;
-        while(start!=slow){
-            start=start->next;
-            slow=slow->next;
-        }
-        cout<<"The head of the cycle is "<<start->data<<endl;
-        return true;
     }
+    cout<<"The head of the cycle is "<<start->data<<endl;
+    return true;
 }
 
 int main()
