@@ -18,7 +18,7 @@ void LPS(string txt,int* lps)
             else{
                 lps[i]=0;
                 i++;
-            }who has excess sleep
+            }
         }
     }
 }
@@ -50,12 +50,14 @@ void KMPsearch(string s,string target,int* lps)
 }
 int main()
 {
-    string s,target;
-    cin>>s>>target;
+    string s="ABABDABACDABABCABAB",target="ABABCABAB";
 
     int m=target.size();
     int lps[m];
     LPS(target,lps);
+    // for(auto it:lps)
+    // cout<<it<<" ";
+    // cout<<endl;
 
     KMPsearch(s,target,lps);
 return 0;

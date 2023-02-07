@@ -1,4 +1,6 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <queue>
+#include <map>
 using namespace std;
 
 class Node{
@@ -16,9 +18,22 @@ public:
     }
 };
 
-void printQueue(Node *root)
+void leftView(Node* root, int level, int *max_level){
+    if (root == NULL)
+        return;
+ 
+    if (*max_level < level) {
+        cout << root->data << " ";
+        *max_level = level;
+    }
+
+    leftView(root->left, level + 1, max_level);
+    leftView(root->right, level + 1, max_level);
+}
+
+void bottomView(Node *root)
 {
-    queue<pair<Node *,int>> q;
+    queue<pair<Node*,int>> q;
     map<int,int> mp;
     int level=0;
 
@@ -54,6 +69,8 @@ int main()
     root->left->right->left=new Node(42);
     root->left->right->right=new Node(43);
 
-    printQueue(root);
+    bottomView(root);
+    int max_level=0;
+    leftView(root,1,&max_level);
     return 0;
 }

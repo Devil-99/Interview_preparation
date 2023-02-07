@@ -14,43 +14,65 @@ using namespace std;
 
 class Shape {
    public:
-      virtual int Area() = 0; // Pure virtual function is declared as follows.
+      virtual float Area() = 0; // Pure virtual function is declared as follows.
+};
 
+
+class Rectangle: public Shape {
+   private:
+      int width;
+      int height;
+   public:
       // Function to set width.
       void setWidth(int w) {width = w;}
       // Function to set height.
       void setHeight(int h) {height = h;}
-   
-   protected:
-      int width;
-      int height;
-};
 
-// A rectangle is a shape; it inherits shape.
-class Rectangle: public Shape {
-   public:
-      int Area() { 
-         return (width * height); 
+      float Area() { 
+         return float(width * height); 
       }
 };
-// A triangle is a shape too; it inherits shape.
+
 class Triangle: public Shape {
+   private:
+      int width;
+      int height;
    public:
-      int Area() { 
-         return (width * height)/2; 
+      // Function to set width.
+      void setWidth(int w) {width = w;}
+      // Function to set height.
+      void setHeight(int h) {height = h;}
+
+      float Area() { 
+         return float(width * height)/2; 
+      }
+};
+
+class Circle: public Shape {
+   private:
+      int radius;
+   public:
+      // Function to set width.
+      void setRadius(int r) {radius = r;}
+      float Area() { 
+         return 3.14*float(radius*radius);
       }
 };
 
 int main() {
   Rectangle R;
   Triangle T;
+  Circle C;
 
   R.setWidth(5);
   R.setHeight(10);
 
-  T.setWidth(20);
-  T.setHeight(8);
+  T.setWidth(15);
+  T.setHeight(7);
+
+  C.setRadius(5);
 
   cout << "The area of the rectangle is: " << R.Area() << endl;
   cout << "The area of the triangle is: " << T.Area() << endl;
+  cout << "The area of the circle is: " << C.Area() << endl;
 }
