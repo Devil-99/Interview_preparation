@@ -1,7 +1,7 @@
 // Total number of smaller element after self for each element.
 // Ex- [5,3,2,4,1]. Number of smaller element = [4,2,1,1,0]. Total = 8
 
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 void merge(int a[],int left,int mid,int right,int &count)
@@ -10,7 +10,6 @@ void merge(int a[],int left,int mid,int right,int &count)
     int n2=right-mid;
 
     int temp1[n1],temp2[n2];
-
     for(int i=0;i<n1;i++)
     temp1[i]=a[left+i];
 
@@ -26,7 +25,7 @@ void merge(int a[],int left,int mid,int right,int &count)
             count += (n1-i);
             a[k++]=temp2[j++];
         }
-        cout<<count<<" ";
+        // cout<<count<<" ";
     }
 
     while(i<n1)
@@ -34,7 +33,6 @@ void merge(int a[],int left,int mid,int right,int &count)
 
     while(j<n2)
     a[k++]=temp2[j++];
-
 }
 
 void merge_sort(int a[],int left,int right,int &count)
@@ -56,7 +54,7 @@ int main() {
 
     // for(int i=0;i<5;i++)
     // cout<<arr[i]<<" ";
-    cout<<count;
+    cout<<endl<<count;
 
     return 0;
 }
