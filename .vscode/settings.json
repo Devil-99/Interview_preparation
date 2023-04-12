@@ -3,6 +3,9 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "valarray": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "deque": "cpp",
+        "vector": "cpp",
+        "xstring": "cpp"
     }
 }

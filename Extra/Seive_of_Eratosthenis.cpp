@@ -1,29 +1,30 @@
 // Find all the prime numbers <= n
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
-void solve(int n)
+void solve(int n, vector<bool>& primes)
 {
-    bool a[n+1];
-    memset(a,true,sizeof(a));
-    a[0]=0;
-    a[1]=0;
+    primes[0]=0;
+    primes[1]=0;
     for(int i=2;i<=n;i++)
     {
         for(int j=2;i*j<=n;j++)
-        {
-            a[i*j]=false;
-        }
+            primes[i*j]=false;
     }
-    for(int i=2;i<=n;i++)
-    if(a[i])
-    cout<<i<<" ";
-    cout<<endl;
 }
 
 int main() {
-    int n;
-    cin>>n;
-    solve(n);
+    int n=5;
+    // cin>>n;
+    vector<bool> primes(n+1,true);
+    solve(n,primes);
+
+    for(int i=2;i<=n;i++)
+        if(primes[i])
+            cout<<i<<" ";
+    cout<<endl;
+
     return 0;
 }
+

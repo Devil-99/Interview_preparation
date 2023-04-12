@@ -4,6 +4,8 @@
 11. Container With Most Water - https://leetcode.com/problems/container-with-most-water/
 932. Beautiful Array - https://leetcode.com/problems/beautiful-array/description/
 134. Gas Station - https://leetcode.com/problems/gas-station/description/
+2439. Minimize Maximum of Array - https://leetcode.com/problems/minimize-maximum-of-array/description/
+
 
 
 Suggestions :

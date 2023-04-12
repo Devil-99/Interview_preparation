@@ -1,61 +1,54 @@
+// Poly = Multiple, Morph = forms.
+// It is a feature of OOP where we can have mutiple forms of same function with same name but different characteristics.
+
+// We can't achieve polymorphism just by changing the return type. Change in argument is necessary.
+
 #include <bits/stdc++.h>
 using namespace std;
 
-class Employee {
-protected:
-    string Name,Company;
-    int Age;
-public:
-// manually made constructor
-    Employee(string name,string company,int age)
-    {
-        Name=name;
-        Company=company;
-        Age=age;
-    }
-     void work(){ cout<<Name<<" is Searching Email"<<endl;}
-    void print()
-    {
-        cout<<"Name is- "<<Name<<endl;
-        cout<<"Company is- "<<Company<<endl;
-        cout<<"Age is- "<<Age<<endl;
-    }
+// Compile time Polymorphism / Method Overloading
+class Calculation {
+    public:
+        void print(int x){
+            cout<<"The number is "<<x<<endl;
+        }
+
+        void print(string s){
+            cout<<"The name is "<<s<<endl;
+        }
+
+        void print(int x,int y){
+            cout<<"The sum is "<<x+y<<endl;
+        }
 };
 
-// derivation is private in default
-class Developer :public Employee{
-public:
-    string Language;
-    // as parent class has no default constructor so we have to create our own constructor for developer class also
-    Developer(string name,string company,int age,string language)
-        : Employee(name,company,age)
-    {
-        Language=language;
-    }
-    void work(){ cout<<Name<<" is coding in "<<Language<<endl;}
+// Runtime Polymorphism / Method Overriding requires virtual function.
+
+class Parent {
+    public:
+        void show(){
+            cout<<"Show parent class"<<endl;
+        }
 };
 
-class Teacher :public Employee{
-public:
-    string Subject;
-    Teacher(string name,string company,int age,string subject)
-        : Employee(name,company,age)
-    {
-        Subject=subject;
-    }
-    void work(){ cout<<Name<<" is tecahing "<<Subject<<endl;}
-
+class Child : public Parent {
+    public:
+        void show(){
+            cout<<"Show child class"<<endl;
+        }
 };
 
-int main() {
-    Employee emp = Employee("Souvik","GS",22);
-    emp.work();
+int main(){
+    Calculation c;
 
-    Developer d = Developer("Shreejeeb","Infosys",23,"Python");
-    d.work();
+    c.print(5);
+    c.print("Souvik");
+    c.print(5,8);
 
-    Teacher t= Teacher("Dhiman Mondal","JGEC",48,"Computer Networks");
-    t.work();
+    Parent p;
+    Child ch;
+    p.show();
+    ch.show();
 
     return 0;
 }

@@ -8,7 +8,16 @@
 
 [Abstraction vs Encapsulation](https://stackoverflow.com/questions/742341/difference-between-abstraction-and-encapsulation)
 
-[Solid Principle in OOPs](https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/)
+[Solid Principle in OOPs](https://www.geeksforgeeks.org/solid-principle-in-programming-understand-with-real-life-examples/) - 
+
+1. **Single Responsibility Principle :-** This means a class should have only one responsibility. It should serve only one purpose.
+2. **Open-Closed Principle :-** It states "Software Components (such as classes, modules, function, etc) should be open for extension but close for modifications."     
+It means new functionality in the code can be added without changing the exsisting code.
+3. **Liskov's Substitution Principle :-** According to this "Derived or child classes must be substitutable for their base or parent classes". In simple terms, a farmer's son should inherit farming skill from his father and should be able to replace his father if needed.
+4. **Interface Segregation Principle :-** It states that “do not force any client to implement an interface which is irrelevant to them“.
+5. **Dependency Inversion Principle :-** 
+    - High-level modules/classes should not depend on low-level modules/classes. Both should depend upon abstractions.
+    - Abstractions should not depend upon details. Details should depend upon abstractions.
 
 [Authentication vs Authorization](https://www.geeksforgeeks.org/difference-between-authentication-and-authorization/)
 

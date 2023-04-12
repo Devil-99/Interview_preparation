@@ -1,3 +1,5 @@
+// It is a feature of OOP where the child classes gets all the characteristics of the parent class.
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -59,6 +61,9 @@ public:
 };
 
 int main() {
+    Employee e= Employee("Souvik","Amazon",23);
+    e.print();
+    
     Developer d = Developer("Shreejeeb","Infosys",23,"Python");
     d.BugFix();
 

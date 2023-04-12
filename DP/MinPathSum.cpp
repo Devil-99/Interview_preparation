@@ -13,7 +13,7 @@ int memoization(int row, int col, int i, int j,vector<vector<int>> &grid, vector
     if(dp[i][j]!=-1)
         return dp[i][j];
 
-    int up,left=INT_MAX;
+    int up,left=INT_MAX;row
 
     if(i>0) up = grid[i][j]+memoization(row,col,i-1,j,grid,dp);
     if(j>0) left = grid[i][j]+memoization(row,col,i,j-1,grid,dp);

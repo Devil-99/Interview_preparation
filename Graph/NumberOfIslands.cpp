@@ -26,5 +26,4 @@ int numIslands(vector<vector<char>>& grid) {
     return count;
 }
 
-// This is just the code snippet, which can't be run.
 // Actual code - https://leetcode.com/problems/number-of-islands/submissions/ - My Submission

@@ -1,3 +1,4 @@
+// A constructor is a special method that is automatically called when a object is created.
 // There are two types of constructor - 1.Default Constructor, 2.Parameterised Constructor
 
 #include <bits/stdc++.h>
@@ -39,7 +40,6 @@ int main() {
     // emp1.company="GS";
     // emp1.age=22;
 
-    //if we use user name constructor
     employee emp1=employee("Souvik","GS",22);
     emp1.print();
 
