@@ -36,13 +36,16 @@ void printQueue(Node *root)
     q.push(root);
     while(!q.empty())
     {
-        Node *temp=q.front();
-        cout<<temp->data<<"  ";
-        q.pop();
-        if(temp->left!=NULL)
-        q.push(temp->left);
-        if(temp->right!=NULL)
-        q.push(temp->right);
+        for(int i=0;i<q.size();i++){
+            Node *temp=q.front();
+            cout<<temp->data<<"  ";
+            q.pop();
+            if(temp->left!=NULL)
+            q.push(temp->left);
+            if(temp->right!=NULL)
+            q.push(temp->right);
+        }
+        cout<<endl;
     }
 }
 
@@ -83,19 +86,19 @@ int main()
     root->right->left=new Node(33);
     root->right->right=new Node(34);
 
-    int h=height(root);
+    // int h=height(root);
     //cout<<h<<endl;
     
     // Recursive approach
-    for(int i=1;i<=h;i++)
-    printRecursive(root,i);
+    // for(int i=1;i<=h;i++)
+    // printRecursive(root,i);
     
     // Print avarage for each level
-    for(int i=1;i<=h;i++){
-        int sum=0,c=0;
-        avg(root,i,sum,c);
-        cout<<double(sum)/double(c)<<endl;
-    }
+    // for(int i=1;i<=h;i++){
+    //     int sum=0,c=0;
+    //     avg(root,i,sum,c);
+    //     cout<<double(sum)/double(c)<<endl;
+    // }
 
     // Iterative approach
     printQueue(root);

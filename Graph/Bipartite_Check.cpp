@@ -20,6 +20,7 @@ bool solve(vector<int>adj[], vector<int>color, int src){
             
         }
         return true;
+        
     }
 return 0;
 }
