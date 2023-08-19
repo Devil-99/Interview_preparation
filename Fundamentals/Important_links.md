@@ -21,6 +21,9 @@ It means new functionality in the code can be added without changing the exsisti
 
 [Authentication vs Authorization](https://www.geeksforgeeks.org/difference-between-authentication-and-authorization/)
 
+- **Authentication** - Who are you ? Are you an authenticated user ?
+- **Authorization** - If you are an authenticated user, What permissions do you have ? *(There are Admin, FrontEnd user, Backend user etc. with different permission/ Authorization, but they are all authenticated.)*
+
 [System Design of a Chat Application](https://towardsdatascience.com/ace-the-system-interview-design-a-chat-application-3f34fd5b85d0)
 
 ### **Q.** We have a website, and it is slowing down? What could be the possible reason for that? How can you troubleshoot this problem?

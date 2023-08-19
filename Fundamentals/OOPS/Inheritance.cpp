@@ -1,3 +1,4 @@
+
 // It is a feature of OOP where the child classes gets all the characteristics of the parent class.
 
 #include <bits/stdc++.h>

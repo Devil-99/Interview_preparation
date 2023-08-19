@@ -60,7 +60,7 @@ To implement asynchronous code in JavaScript we use callback functions and promi
 # 4. Let vs Var ?
 * The main difference is scoping rule. **Let** is introduced in ES6. Variables declared with **Var** keyword has the function scope or global scope.It is scoped to the immediate function body. Where as **let** keyword has the block scope, It only works under enclosing block.
 * 2 **var** declaration in a same scope does not give any error, one overwrites another. But 2 **let** declaration in same scope gives error.
-* We can use hosting with **var** but not wuth **let**.
+* We can use hosting with **var** but not with **let**.
 
 # 5. setTimeout vs setInterval ?
 * setTimeout runs the code/function ***once*** after the timeout.
@@ -123,4 +123,24 @@ It is a function that is applied before any routes.
 Sometimes we need to execute something before routing to another page like authentication etc. Then we use middleware.
 
 A middleware has 3 arguments request, response, nextFunction(). The page will continue loading until the nextFunction get exected.
+
+
+# 11. Sting functions
+
+- String length - str.length()
+- Finding a string on another string - str.indexof("string", startIndex) / str.lastindexof("string", stratIndex);
+- Searching a string on a string - str.search("string")
+- Extracting string parts - slice(start,end) / substring(start,end) / substr(start,length)
+- Replacing string content - str.replace("old string", "new string")
+- Converting uppercase and lowercase - str.toUpperCase() / str.toLowerCase()
+- Concatenation of 2 string - str.concat("",str2);
+- Removing white spaces from both end - str.trim()
+
+
+
+
+
+
+
+
 

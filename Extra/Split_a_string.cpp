@@ -21,8 +21,10 @@ int numSplits(string s) {
     }
     int ans=0;
     for(int i=1;i<n;i++){
-        if(prefix[i-1]==suffix[i])
-        ans++;
+        if(prefix[i-1]==suffix[i]){
+            cout<<i<<endl;
+            ans++;
+        }
     }
     return ans;
 }

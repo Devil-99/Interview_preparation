@@ -11,11 +11,10 @@ string subString (string S)
         l=max(l,v[S[i]]);
         len=max(len,i-l+1);
         v[S[i]]=i+1;
-        if(len>mx)
-        {
+        if(len>mx){
             mx=len;
             x=l;
-            y=i;
+            y=i; 
         }
     }
     for(int i=x;i<=y;i++)

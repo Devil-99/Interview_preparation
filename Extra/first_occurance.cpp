@@ -5,9 +5,10 @@ int main() {
 	string s;
 	cin>>s;
 	map<char,int>m,p;
-	for(int i=0;i<s.length();i++)
-    {m[s[i]]++;
-	p[s[i]]=i;}
+	for(int i=0;i<s.length();i++){
+		m[s[i]]++;
+		p[s[i]]=i;
+	}
 	multimap<int,char>mp;
 	
 	for(auto it:m)

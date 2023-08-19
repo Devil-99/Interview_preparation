@@ -3,7 +3,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<vector<int>> merge(vector<vector<int>> intervals) {
+int merge(vector<vector<int>> intervals) {
 vector<vector<int>> ans;
 int n=intervals.size();
 sort(intervals.begin(),intervals.end());
@@ -14,13 +14,12 @@ for(int i=0;i<intervals.size();i++) {
     else
         ans.push_back(intervals[i]);
 }
-return ans;
+return ans.size();
 }
 
 int main() {
     vector<vector<int>> intervals{{1,3},{2,6},{8,10},{15,18}};
-    vector<vector<int>> ans = merge(intervals);
-    for(auto it:ans)
-        cout<<it[0]<<","<<it[1]<<endl;
+    int ans = merge(intervals);
+    cout<<ans<<endl;
     return 0;
 }

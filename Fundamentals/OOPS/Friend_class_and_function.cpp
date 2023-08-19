@@ -1,3 +1,6 @@
+// A friend function can be granted special access to private and protected members of a class in C++.
+// It can be a global function, or a Member function of another class.
+
 #include <bits/stdc++.h>
 using namespace std;
 

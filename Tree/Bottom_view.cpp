@@ -18,17 +18,13 @@ public:
     }
 };
 
-void leftView(Node* root, int level, int *max_level){
-    if (root == NULL)
+void leftView(Node* root, int level, vector<int>& ans){
+    if(!root)
         return;
- 
-    if (*max_level < level) {
-        cout << root->data << " ";
-        *max_level = level;
-    }
-
-    leftView(root->left, level + 1, max_level);
-    leftView(root->right, level + 1, max_level);
+    if(level==ans.size())
+        ans.push_back(root->data);
+    leftView(root->left,level+1,ans);
+    leftView(root->right,level+1,ans);
 }
 
 void bottomView(Node *root)
@@ -66,11 +62,17 @@ int main()
     root->left->right=new Node(32);
     root->right->left=new Node(33);
     root->right->right=new Node(34);
-    root->left->right->left=new Node(42);
-    root->left->right->right=new Node(43);
+    root->left->right->left=new Node(43);
+    root->left->right->right=new Node(44);
 
     bottomView(root);
-    int max_level=0;
-    leftView(root,1,&max_level);
+
+    vector<int>ans;
+    leftView(root,0,ans);
+
+    for(auto i:ans)
+        cout<<i<<" ";
+    cout<<endl;
+    
     return 0;
 }
