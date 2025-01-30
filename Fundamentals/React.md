@@ -4,7 +4,7 @@
 - Classes don't minify very well and make hot reloading very unreliable.
 
 Previously React functional component was stateless component with no Life Cycle methods compatible. But after introducing Hook concept it has changed.
-- Hooks helps us to allowing use stateful logic without tempering the component structure. And also allow us to use Life Cycle methods.
+- Hooks helps us to use stateful logic without tempering the component structure. And also allow us to use Life Cycle methods.
 
 *Though a stateless component can render props.*
 
@@ -21,7 +21,7 @@ Or we can use binding by defining the handler as an callback arrow function.
 # 2. React State and  Props.
 **React states** are mutable variable defined under react components.These are changed by useState/setState hooks.  
 
-**React props** are like arguments passed through components.So that we can use same component for multiple values.
+**React props** are like arguments passed through components.So that we can use same value for multiple components.
 
 Video link - [SimpliLearn](https://www.simplilearn.com/what-is-reactjs-props-article#:~:text=In%20ReactJS%2C%20the%20props%20are,components%20are%20read%2Donly%20components.)
 

@@ -1,18 +1,9 @@
 1. ### Why Consultant role not SDE ?
-    So as a freshers I have no boundation like I only want to work on product base or service base companies or like as a SDE or System Engineer. As a fresher, I look forward to learn new skills and technologies, be versatile for any areas, know working cultures of tech companies and gain experience. I just want to be flexible and don't want to stuck in any particular field at the early stage of my carrer. So any field will be comfortable for me.. Whether it's a technical role or non-technical, It will add a good experience in me and I am ready to give my best here.
+    So as a freshers I have no boundation like I only want to work on product base or service base companies or like as a SDE or System Engineer. As a fresher, I look forward to learn new skills and technologies, be versatile for any areas, know working cultures of tech companies and gain experience. I just want to be flexible and don't want to stuck in any particular field at the early stage of  my carrer. So any field will be comfortable for me.. Whether it's a technical role or non-technical, It will add a good experience in me and I am ready to give my best here.
 
 ### Why should we hire you ?
 Deloitte search for a good employee with good technical skill, communication skill, Problem solving skill etc.
 As of me, I have an Internship experience on one of the largest tech giant Amazon on SDE role and there I learn about team work, time management skill, technical skill as well as soft skill. I deliver my projects on time, help other peers in their blockers, deliver good presentation about my project. So I can be a great employee for Deloitte also.
-
-2. ### WHY Deloitte ?
-    Deloitte is a leading global provider of consultance, audit, financial advisory, risk advisory, tax services. As a big four, it is well knowned globaly.
-    I always wanted to see myself in such a tech giant.
-
-    Also, I came to know form my seniors who are in Deloitte that it has a great working culture and is very supporting in career and personal growth. So I believe Deloitte can provide me the platform to fulfill my goals and also my skills will help Deloitte grow further and help millions of people around the globe.
-
-3. ### What do you know about Deloitte ?
-    Deloitte is a leading global provider of consulting, audit and assurance, financial advisory, risk advisory, tax services. It was founded on 1845 on London. and since then it significantly has grown. As a big four, It is one of the largest privately owned professional services company.
 
 4. ### Where do you see yourself in 5 years?
     As a software engineer learning new technologies is a passion for me.. and just like everyone I want to see myself working in tech giants and big MNCs. So if I got a chance to work with your company I will improve myself day by day and will try to reach at a top level position.
