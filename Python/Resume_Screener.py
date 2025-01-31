@@ -1,26 +1,4 @@
-Souvik = {
-    'name': 'Souvik Maji',
-    'age': 23,
-    'stream': 'CSE'
-}
-Soumya = {
-    'name':'Soumya Maji',
-    'age':28,
-    'stream':'CE'
-}
-
-db={}
-db['Souvik']=Souvik
-db['Soumya']=Soumya
-
-import pickle
-
-d=pickle.dumps(db)
-
-data=pickle.loads(d)
-print(data)
-
-
+# Resume Screener
 
 import os
 import re
@@ -28,8 +6,6 @@ import pdfplumber
 import docx
 import spacy
 import pandas as pd
-import tkinter as tk
-from tkinter import filedialog
 from fuzzywuzzy import fuzz
 
 # Load NLP model
@@ -37,7 +13,7 @@ nlp = spacy.load("en_core_web_sm")
 
 # Define criteria
 REQUIRED_SKILLS = {"react", "node.js", "aws", "postgreSQL", "typescript", "django", "fastapi", "python"}
-MIN_EXPERIENCE_YEARS = 2
+MIN_EXPERIENCE_YEARS = 1
 EDUCATION_KEYWORDS = {"computer science", "information technology", "software engineering"}
 
 # Extract text from PDF
@@ -55,9 +31,18 @@ def extract_text_from_docx(docx_path):
 
 # Extract years of experience using regex
 def extract_experience(text):
-    experience_matches = re.findall(r'(\d{1,2})\s*(?:\+?|\-)?\s*(?:years?|yrs?|y.o)', text, re.IGNORECASE)
-    years = max(map(int, experience_matches), default=0)
-    return years
+    # Find years and months of experience
+    year_matches = re.findall(r'(\d{1,2})\s*(?:\+?|\-)?\s*(?:years?|yrs?|y\.o)', text, re.IGNORECASE)
+    month_matches = re.findall(r'(\d{1,2})\s*(?:\+?|\-)?\s*(?:months?|mos?)', text, re.IGNORECASE)
+    
+    # Convert extracted values to integers
+    years = sum(map(int, year_matches)) if year_matches else 0
+    months = sum(map(int, month_matches)) if month_matches else 0
+
+    # Convert months to years (12 months = 1 year)
+    total_experience = years + (months / 12)
+    
+    return round(total_experience, 2) 
 
 # Match skills using fuzzy matching (handles spelling variations)
 def match_skills(text):
@@ -68,12 +53,19 @@ def match_skills(text):
 def check_education(text):
     return any(edu in text.lower() for edu in EDUCATION_KEYWORDS)
 
+def contains_live_link(text):
+    """Checks if the resume contains live project links (GitHub, Portfolio, LinkedIn, etc.)."""
+    link_pattern = r'(https?://[^\s]+)'  # Detects URLs starting with http:// or https://
+    links = re.findall(link_pattern, text)
+    return links if links else []  # Returns list of links if found, else None
+
 # Scoring function
-def calculate_score(experience, matched_skills, has_education):
+def calculate_score(experience, matched_skills, has_education, has_live_link):
     skill_score = len(matched_skills) * 2  # Each skill is worth 2 points
     experience_score = 3 if experience >= MIN_EXPERIENCE_YEARS else 1 if experience > 0 else 0
     education_score = 3 if has_education else 0
-    return skill_score + experience_score + education_score
+    link_score = 2 if len(has_live_link) > 0 else 0
+    return skill_score + experience_score + education_score + link_score
 
 # Process resumes
 def process_resumes(folder_path):
@@ -90,19 +82,21 @@ def process_resumes(folder_path):
         experience = extract_experience(text)
         matched_skills = match_skills(text)
         has_education = check_education(text)
-        score = calculate_score(experience, matched_skills, has_education)
+        has_live_link = contains_live_link(text)
+        score = calculate_score(experience, matched_skills, has_education, has_live_link)
 
         results.append({
             "filename": filename,
             "experience_years": experience,
             "skills_matched": ", ".join(matched_skills),
             "education": "Yes" if has_education else "No",
+            "live_link": ", ".join(has_live_link),
             "score": score
         })
     
     return pd.DataFrame(results)
 
-folder_path = "V:\Interview Preperation\Python\Dummy"
+folder_path = "V:\Interview Preperation\Python\Dummy Data"
 
 df = process_resumes(folder_path)
 df = df.sort_values(by="score", ascending=False)
