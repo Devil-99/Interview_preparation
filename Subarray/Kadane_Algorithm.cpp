@@ -1,6 +1,9 @@
 // Maximum (Contiguous)Subarray Sum
 
-#include <bits/stdc++.h>
+#include <vector>
+#include <iostream>
+#include <climits>
+
 using namespace std;
 int kadane(vector<int> nums)
 {
