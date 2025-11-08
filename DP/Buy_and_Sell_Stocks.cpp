@@ -1,6 +1,8 @@
 // 1. Choose a single day to buy and different day to sell stock. Return the maximum profit.
+// 2. Maximum total profit that I can make considering that I can buy and sell more than 1 time.
 
-#include <bits/stdc++.h>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 int buySell1(vector<int> prices)
