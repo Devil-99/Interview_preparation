@@ -1,6 +1,12 @@
 /*                	SOUVIK MAJI 
    JALPAIGURI GOVT. ENGG. COLLEGE*/
-#include <bits/stdc++.h>
+#include<iostream>
+#include<cmath>
+#include<vector>
+#include<algorithm>
+#include<map>
+#include<set>
+#include<string>
 using namespace std;
 #define ll long long
 #define dd double
@@ -46,17 +52,17 @@ bool f(ll x,ll y) {return x>y;}
 string solve(int num)
 {
     string s[]={"M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"};
-        int a[]={1000,900,500,400,100,90,50,40,10,9,5,4,1};
-        string ans="";
-        for(int i=0;num>0;i++)
+    int a[]={1000,900,500,400,100,90,50,40,10,9,5,4,1};
+    string ans="";
+    for(int i=0;num>0;i++)
+    {
+        while(num>=a[i])
         {
-            while(num>=a[i])
-            {
-                ans+=s[i];
-                num-=a[i];
-            }
+            ans+=s[i];
+            num-=a[i];
         }
-        return ans;
+    }
+    return ans;
 }
 int main() {
     int num;

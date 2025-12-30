@@ -1,3 +1,5 @@
 .vscode
 *.exe
 xyz.cpp
+*.dSYM/
+*.DS_store

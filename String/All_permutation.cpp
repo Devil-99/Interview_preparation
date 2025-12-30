@@ -1,5 +1,9 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <algorithm>
+
 using namespace std;
+
 void permute(string s,int l,int r)
 {
     if(l==r)
